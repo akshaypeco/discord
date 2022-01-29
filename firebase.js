@@ -7,7 +7,9 @@ import {
   getDoc,
   getDocs,
   getFirestore,
+  query,
   setDoc,
+  where,
 } from "firebase/firestore";
 import { useState } from "react";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -104,5 +106,34 @@ export async function reportLink(className) {
     );
   } catch (e) {
     console.error("Error setting broken link: ", e);
+  }
+}
+
+export async function searchClasses(param) {
+  try {
+    if (param != null) {
+      var strSearch = param;
+      var strLength = strSearch.length;
+      var strFrontCode = strSearch.slice(0, strLength - 1);
+      var strEndCode = strSearch.slice(strLength - 1, strSearch.length);
+
+      var startcode = strSearch;
+      var endcode =
+        strFrontCode + String.fromCharCode(strEndCode.charCodeAt(0) + 1);
+      const classRef = collection(db, "classes");
+      const q = query(
+        classRef,
+        where("classname", ">=", startcode),
+        where("classname", "<", endcode)
+      );
+      const results = [];
+      const querySnapshot = await getDocs(q);
+      querySnapshot.forEach((doc) => {
+        results.push(doc.data());
+      });
+      return results;
+    }
+  } catch (e) {
+    console.error("Error finding search results: ", e);
   }
 }

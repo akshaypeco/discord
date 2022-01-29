@@ -42,10 +42,12 @@
 
 .search {
   padding: 13px 13px 13px 15px;
-  font-size: 17px;
+  font-size: 19px;
   width: 100%;
   background: transparent;
   border: 1px solid rgb(209, 209, 209);
+  color: white;
+
   font-family: "spartan", sans-serif;
 
   border-radius: 2px;
@@ -74,7 +76,7 @@
 .searchResult {
   display: flex;
   flex-direction: row;
-  padding: 16px 20px 16px 20px;
+  padding: 18px 20px 16px 20px;
   border-bottom: 1px solid rgb(209, 209, 209);
 }
 
@@ -133,6 +135,8 @@
   color: white;
   border: none !important;
   height: 44px;
+  font-size: 15px;
+  padding-top: 2px;
   font-family: "spartan", sans-serif;
   width: 75px;
   margin-left: 5px;

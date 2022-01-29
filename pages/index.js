@@ -2,20 +2,31 @@ import { collection, doc, getDoc, getDocs, query } from "firebase/firestore";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { getAllClasses } from "../firebase";
+import { getAllClasses, searchClasses } from "../firebase";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const [classSearch, setClassSearch] = useState("");
   const [allClasses, setAllClasses] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getAllClasses();
-      setAllClasses(data);
+      if (classSearch == "") {
+        const data = await getAllClasses();
+        setAllClasses(data);
+      } else {
+        const searchDat = await searchClasses(classSearch);
+        setAllClasses(searchDat);
+      }
     };
     fetchData().then(setLoading(false));
   }, [loading]);
+
+  const handleChange = async (event) => {
+    setClassSearch(event.target.value);
+    setLoading(true);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -55,7 +66,7 @@ export default function Home() {
             paddingTop: 45,
           }}
         >
-          Add a Discord, find a Discord
+          Find a Discord
         </h1>
 
         <p
@@ -69,20 +80,20 @@ export default function Home() {
             lineHeight: 1.2,
           }}
         >
-          A community-sourced hub that makes it easier to find and contribute
-          active Discords, without needing to ask on Discord or Reddit.
+          Add and look up Discord links for your classes without needing admin
+          status.
         </p>
       </div>
-      {/* <div className={styles.searchContainer}>
+      <div className={styles.searchContainer}>
         <p style={{ marginTop: 50, marginBottom: 5, fontSize: 16.5 }}>
           Search for your class:
         </p>
         <input
+          type={"text"}
+          onChange={handleChange}
           className={styles.search}
-          placeholder="Coming soon..."
-          readOnly
         />
-      </div> */}
+      </div>
       <div className={styles.legendContainer}>
         <p className={styles.courseNameLegend}>Course Name</p>
         <div style={{ display: "flex", marginLeft: "auto" }}>
