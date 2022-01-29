@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.textArea {
+  width: 60%;
+  margin: auto;
+  height: 100px;
+  font-family: sans-serif;
+}
+
+.button {
+  width: 10%;
+  margin: auto;
+  background-color: none;
+  outline: none;
+  border: none;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.button:hover {
+  background-color: #c9c8c8;
+}

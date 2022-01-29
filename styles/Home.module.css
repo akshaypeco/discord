@@ -1,0 +1,163 @@
+/* TRBL */
+.root {
+  background-color: white;
+}
+
+.legendContainer {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.courseNameLegend {
+  margin-left: 15px;
+}
+
+.verifiedLegend {
+  margin-right: 120px;
+}
+
+.studyGroupLegend {
+  margin-right: 13px;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.search {
+  padding: 13px 13px 13px 15px;
+  font-size: 17px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 2px;
+}
+
+.search:focus {
+  outline: 0.5px solid rgb(182, 182, 182) !important;
+}
+
+.searchResultsContainer {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  outline: 1px solid rgb(209, 209, 209);
+  border-radius: 5px;
+}
+
+.searchResultsList {
+  list-style-type: none;
+  padding: 0px;
+  width: 100%;
+  margin: 0px;
+}
+
+.searchResult {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 20px 16px 20px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.searchResult:hover {
+  background-color: rgba(243, 243, 243, 0.933);
+}
+
+.searchResultLast {
+  display: flex;
+  font-size: 14px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px 12px 20px;
+}
+
+.courseName {
+  display: block;
+  width: 150px;
+  padding-right: 20px;
+  float: left;
+}
+
+.verified {
+  display: block;
+  margin-right: 105px;
+  width: 125px;
+}
+
+.studyGroups {
+  display: block;
+  text-align: right;
+  width: 30px;
+}
+
+.addClassInput {
+  font-size: 14px;
+  height: 38px;
+  padding-left: 10px;
+  width: 100%;
+  background: transparent;
+  border: 2px solid rgb(209, 209, 209);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 12px;
+  text-transform: uppercase;
+}
+
+.addClassSearch:focus {
+  outline: 0.5px solid rgb(182, 182, 182) !important;
+}
+
+.addClassButton {
+  background-color: rgb(209, 209, 209);
+  border: none !important;
+  height: 44px;
+  width: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.addClassButton:hover {
+  background-color: rgb(192, 192, 192);
+}
+
+@media (max-width: 520px) {
+  .courseNameLegend {
+    margin-left: 15px;
+  }
+
+  .verifiedLegend {
+    margin-right: 38px;
+  }
+
+  .studyGroupLegend {
+    margin-right: 13px;
+  }
+  .courseName {
+    display: block;
+    width: 110px;
+    padding-right: 10px;
+    float: left;
+  }
+
+  .verified {
+    display: block;
+    margin-right: 26px;
+    width: 125px;
+  }
+
+  .studyGroups {
+    display: block;
+    text-align: right;
+  }
+}
