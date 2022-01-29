@@ -58,7 +58,7 @@ export default function ClassPage() {
             marginTop: 0,
             paddingTop: 80,
             marginBottom: 0,
-            fontSize: 35,
+            fontSize: 38,
           }}
         >
           {classname}
@@ -87,7 +87,11 @@ export default function ClassPage() {
             </a>
           </div>
           <div className={styles.addMain}>
-            <p>Post/replace current link:</p>
+            <p style={{ fontSize: 17 }}>Post/replace current link:</p>
+            <p style={{ fontSize: 15.5, marginTop: 0, color: "#cd5c5c" }}>
+              Remember to set the invite expiration to NEVER
+            </p>
+
             <div style={{ display: "flex", flexDirection: "row" }}>
               <input
                 className={styles.addClassInput}

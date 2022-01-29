@@ -64,10 +64,13 @@ export default function Home() {
             textAlign: "center",
             paddingTop: 10,
             fontSize: 18,
+            marginLeft: 50,
+            marginRight: 50,
+            lineHeight: 1.2,
           }}
         >
-          A crowd-sourced hub to find active Discords, without having to use
-          Discord or Reddit.
+          A community-sourced hub that makes it easier to find and contribute
+          active Discords, without needing to ask on Discord or Reddit.
         </p>
       </div>
       {/* <div className={styles.searchContainer}>
