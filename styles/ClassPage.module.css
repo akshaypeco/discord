@@ -1,3 +1,9 @@
+.root {
+  background-color: #23272a;
+  height: 100vh;
+  min-width: 375px;
+}
+
 .addMain {
   display: flex;
   font-size: 14px;
@@ -6,6 +12,7 @@
   align-items: left;
   margin-left: 40px;
   width: 50%;
+  font-family: "spartan", sans-serif;
   padding: 12px 20px 12px 20px;
 }
 
@@ -15,20 +22,26 @@
   margin-left: 50px;
   padding: 12px 20px 12px 20px;
   font-size: 18px;
+  background-color: #2c2f33;
   border: none;
-  outline: 1px solid #f3f3f3;
+  font-family: "spartan", sans-serif;
+
+  outline: 1px solid #2c2f33;
 }
 
 .copyButton {
   outline: none;
   border: none;
   width: 60px;
+  font-family: "spartan", sans-serif;
   margin-left: 10px;
   padding-left: 9px;
+  color: white;
+  background-color: rgb(85, 85, 85);
 }
 
 .copyButton:hover {
-  background-color: rgb(192, 192, 192);
+  background-color: rgb(143, 143, 143);
 }
 
 .visitLink {
@@ -39,21 +52,25 @@
   text-align: center;
   background-color: rgb(85, 85, 85);
   color: white;
-  padding-top: 12px;
+  padding-top: 15px;
+  font-family: "spartan", sans-serif;
+
   font-size: 14px;
 }
 
 .visitLink:hover {
-  background-color: rgb(192, 192, 192);
+  background-color: rgb(143, 143, 143);
 }
 
 .addClassInput {
   font-size: 14px;
   height: 38px;
+  font-family: "spartan", sans-serif;
   padding-left: 10px;
   width: 100%;
-  background: transparent;
-  border: 2px solid rgb(209, 209, 209);
+  background-color: #2c2f33;
+  border: none;
+  font-family: "spartan", sans-serif;
   border-radius: 5px;
 }
 
@@ -63,8 +80,10 @@
 
 .addClassButton {
   border: none !important;
-  height: 44px;
+  height: 38px;
   width: 50px;
+  font-family: "spartan", sans-serif;
+  background-color: rgb(143, 143, 143);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -77,6 +96,8 @@
   border: none;
   height: 40px;
   width: 150px;
+  font-family: "spartan", sans-serif;
+  padding-top: 5px;
   border-radius: 5px;
   background-color: rgb(231, 175, 175);
   margin: auto;

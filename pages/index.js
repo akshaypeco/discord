@@ -37,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ minWidth: 375 }}>
+    <div className={styles.root}>
       <Head>
         <title>Home - whatsthediscord.com</title>
         <meta
@@ -46,7 +46,31 @@ export default function Home() {
         />
         <link rel="icon" href="/websiteIcon.png" />
       </Head>
-      <div className={styles.searchContainer}>
+      <div className={styles.introContainer}>
+        <h1
+          style={{
+            marginTop: 0,
+            marginBottom: 10,
+            textAlign: "center",
+            paddingTop: 45,
+          }}
+        >
+          Add a Discord, find a Discord
+        </h1>
+
+        <p
+          style={{
+            marginTop: 0,
+            textAlign: "center",
+            paddingTop: 10,
+            fontSize: 18,
+          }}
+        >
+          A crowd-sourced hub to find active Discords, without having to use
+          Discord or Reddit.
+        </p>
+      </div>
+      {/* <div className={styles.searchContainer}>
         <p style={{ marginTop: 50, marginBottom: 5, fontSize: 16.5 }}>
           Search for your class:
         </p>
@@ -55,7 +79,7 @@ export default function Home() {
           placeholder="Coming soon..."
           readOnly
         />
-      </div>
+      </div> */}
       <div className={styles.legendContainer}>
         <p className={styles.courseNameLegend}>Course Name</p>
         <div style={{ display: "flex", marginLeft: "auto" }}>
@@ -97,7 +121,7 @@ export default function Home() {
           )}
 
           <form className={styles.searchResultLast} onSubmit={handleSubmit}>
-            <p style={{ width: 95 }}>Add class:</p>
+            <p style={{ width: 95, fontSize: 16 }}>Add class:</p>
             <input
               className={styles.addClassInput}
               placeholder="ESPMC103"

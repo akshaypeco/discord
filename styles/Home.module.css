@@ -1,10 +1,17 @@
 /* TRBL */
 .root {
-  background-color: white;
+  background-color: #23272a;
+  padding-bottom: 20px;
+  height: 100vh;
+}
+
+.introContainer {
+  margin-top: 0;
 }
 
 .legendContainer {
   display: flex;
+  color: white;
   flex-direction: row;
   width: 90%;
   margin: auto;
@@ -18,7 +25,7 @@
 }
 
 .verifiedLegend {
-  margin-right: 120px;
+  margin-right: 130px;
 }
 
 .studyGroupLegend {
@@ -30,7 +37,7 @@
   flex-direction: column;
   width: 55%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 .search {
@@ -39,6 +46,8 @@
   width: 100%;
   background: transparent;
   border: 1px solid rgb(209, 209, 209);
+  font-family: "spartan", sans-serif;
+
   border-radius: 2px;
 }
 
@@ -70,7 +79,7 @@
 }
 
 .searchResult:hover {
-  background-color: rgba(243, 243, 243, 0.933);
+  background-color: #2c2f33;
 }
 
 .searchResultLast {
@@ -102,14 +111,16 @@
 }
 
 .addClassInput {
-  font-size: 14px;
+  font-size: 16px;
   height: 38px;
   padding-left: 10px;
   width: 100%;
-  background: transparent;
-  border: 2px solid rgb(209, 209, 209);
+  background: #2c2f33;
+  border: 2px solid #2c2f33;
+  color: white;
   border-radius: 2px;
   margin-left: 12px;
+  font-family: "spartan", sans-serif;
   text-transform: uppercase;
 }
 
@@ -118,10 +129,11 @@
 }
 
 .addClassButton {
-  background-color: #3b7ea1;
+  background-color: #7289da;
   color: white;
   border: none !important;
   height: 44px;
+  font-family: "spartan", sans-serif;
   width: 75px;
   margin-left: 5px;
   border-radius: 5px;

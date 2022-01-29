@@ -42,7 +42,7 @@ export default function ClassPage() {
   };
 
   return (
-    <div style={{ minWidth: 375 }}>
+    <div className={styles.root}>
       <Head>
         <title>{classname} - class page</title>
         <meta
@@ -55,23 +55,15 @@ export default function ClassPage() {
         <h1
           style={{
             marginLeft: 50,
-            marginTop: 40,
+            marginTop: 0,
+            paddingTop: 80,
             marginBottom: 0,
             fontSize: 35,
           }}
         >
           {classname}
         </h1>
-        <p
-          style={{
-            marginLeft: 50,
-            marginRight: 50,
-            marginTop: 10,
-            fontSize: 18,
-          }}
-        >
-          If the link doesn't work, replace it or report it as broken.
-        </p>
+
         <div>
           <h3 style={{ marginLeft: 50, marginTop: 50 }}>Main Discord</h3>
           <div style={{ display: "flex", flexDirection: "row" }}>
@@ -87,12 +79,11 @@ export default function ClassPage() {
               Copy
             </button>
             <a
-              href="/"
               href={classData.discordMainLink}
               target={"_blank"}
               className={styles.visitLink}
             >
-              Visit
+              Join
             </a>
           </div>
           <div className={styles.addMain}>
@@ -114,7 +105,9 @@ export default function ClassPage() {
               </button>
             </div>
           </div>
-          <div style={{ textAlign: "center", marginTop: 40, marginBottom: 40 }}>
+          <div
+            style={{ textAlign: "center", marginTop: 40, paddingBottom: 40 }}
+          >
             <button
               type="button"
               className={styles.reportBroken}
