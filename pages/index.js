@@ -81,7 +81,7 @@ export default function Home() {
           }}
         >
           Add and look up Discord links for your classes without needing admin
-          status.
+          status, and let others know how active a server is.
         </p>
       </div>
       <div className={styles.searchContainer}>
@@ -97,7 +97,7 @@ export default function Home() {
       <div className={styles.legendContainer}>
         <p className={styles.courseNameLegend}>Course Name</p>
         <div style={{ display: "flex", marginLeft: "auto" }}>
-          <p className={styles.verifiedLegend}>Last updated</p>
+          <p className={styles.verifiedLegend}>Active for</p>
           <p className={styles.studyGroupLegend}>Working</p>
         </div>
       </div>
