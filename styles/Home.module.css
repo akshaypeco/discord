@@ -2,6 +2,7 @@
 .root {
   background-color: #23272a;
   padding-bottom: 20px;
+  min-height: 100vh;
 }
 
 .introContainer {
