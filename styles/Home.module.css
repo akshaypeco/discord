@@ -2,7 +2,6 @@
 .root {
   background-color: #23272a;
   padding-bottom: 20px;
-  height: 100vh;
 }
 
 .introContainer {
@@ -61,7 +60,6 @@
   display: flex;
   width: 90%;
   margin: auto;
-  margin-bottom: 20px;
   outline: 1px solid rgb(209, 209, 209);
   border-radius: 5px;
 }
