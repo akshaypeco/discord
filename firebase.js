@@ -34,7 +34,7 @@ const db = getFirestore();
 export async function addClass(data) {
   try {
     await setDoc(
-      doc(db, "classes", data.classname),
+      doc(db, "classes", data.classname.toUpperCase()),
       {
         classname: data.classname.toUpperCase(),
         isBroken: false,
@@ -112,7 +112,7 @@ export async function reportLink(className) {
 export async function searchClasses(param) {
   try {
     if (param != null) {
-      var strSearch = param;
+      var strSearch = param.toUpperCase();
       var strLength = strSearch.length;
       var strFrontCode = strSearch.slice(0, strLength - 1);
       var strEndCode = strSearch.slice(strLength - 1, strSearch.length);
